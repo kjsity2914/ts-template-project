@@ -1,7 +1,7 @@
 # TS Template Project
 
 This project is a TypeScript starter template for building a lightweight backend service with modern Node.js tooling, strong validation and test coverage.
-It is structured to support clean API development and reusable utility modules while keeping the codebase easy to extend.
+It is structured to support clean API development and reusable utility modules whilst keeping the codebase easy to extend.
 
 ## 🚀 Features
  
@@ -46,6 +46,9 @@ To benefit from auto‑fixing, use VS Code with the ESLint extension installed.
 ```bash
 yarn install
 ```
+
+---
+
 ## 🛠 Scripts
 | Script | Description |
 | --- | --- |
@@ -165,6 +168,8 @@ To enable auto‑fix on save, ensure you have the following in your VS Code sett
 - Consistent formatting across the entire project
 - Reduced noise in pull requests
 - Faster development workflow
+
+---
 
 ## 📄 Environment Variables
 | Variable | Default | Description |
