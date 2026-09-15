@@ -1,7 +1,7 @@
 # TS Template Project
 
 This project is a TypeScript starter template for building a lightweight backend service with modern Node.js tooling, strong validation and test coverage.
-It is structured to support clean API development, database-backed data processing and reusable utility modules while keeping the codebase easy to extend.
+It is structured to support clean API development and reusable utility modules while keeping the codebase easy to extend.
 
 ## 🚀 Features
  
@@ -39,6 +39,7 @@ npm install --global yarn
 The project includes lint‑on‑save functionality using ESLint.
 To benefit from auto‑fixing, use VS Code with the ESLint extension installed.
 
+---
 
 ## 📦 Installation
 
@@ -96,6 +97,8 @@ Displays greeting with a name
 GET /hello-world?name=Kevin&showDatetime=true
 ```
 
+---
+
 ## 🧪 Testing
 The project includes a full Jest test suite covering:
 
@@ -113,6 +116,8 @@ Run in watch mode:
 yarn test:watch
 ```
 
+---
+
 ## ▶️ Running the App
 **Development**
 ```bash
@@ -124,6 +129,8 @@ yarn dev
 yarn build
 yarn start
 ```
+
+---
 
 ## 🧹 Linting & Auto‑Fix on Save
 This project includes a fully configured ESLint setup to ensure code quality and consistency.
