@@ -1,11 +1,12 @@
 import {
+    toISODateParam,
     toOptionalNumberParam,
     toOptionalStringParam,
     toStringArrayParam,
     toStringParam,
 } from './toParam.js';
 
-describe('toParam', () => {
+describe('toStringParam', () => {
     test('returns string directly', () => {
         expect(toStringParam('foo', 'bar')).toBe('foo');
     });
@@ -89,6 +90,30 @@ describe('toOptionalNumberParam', () => {
     test('throws on invalid type', () => {
         expect(() => toOptionalNumberParam({}, 'foo')).toThrow(
             'foo has an invalid query parameter type',
+        );
+    });
+});
+
+describe('toISODateParam', () => {
+    test('throws when param is not a string', () => {
+        expect(() => toISODateParam(123, 'dateTime')).toThrow('dateTime must be a string');
+    });
+
+    test('throws when param is not in correct format', () => {
+        expect(() => toISODateParam('2026-4-6', 'dateTime')).toThrow(
+            'dateTime must be in YYYY-MM-DD format',
+        );
+    });
+
+    test('throws when param is not a valid date', () => {
+        expect(() => toISODateParam('2026-99-99', 'dateTime')).toThrow(
+            'dateTime must be a valid date',
+        );
+    });
+
+    test('throws when param is not a valid calendar date', () => {
+        expect(() => toISODateParam('2026-02-29', 'dateTime')).toThrow(
+            'dateTime must be a valid calendar date',
         );
     });
 });
